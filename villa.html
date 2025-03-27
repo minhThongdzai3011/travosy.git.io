@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="villa.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="villa.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header id="change_background">
+      <div>
+        <div class="header-dashboard-line1">
+          <div class="header-dashboard-line1-part1">
+            <div class="line1-part2-hover">
+              <div class="line1-part1-icon-clock">
+                <i class="fa-regular fa-clock"></i>
+              </div>
+              <div>
+                <p>Mon-Sat: 9am to 6pm</p>
+              </div>
+            </div>
+            <div class="line1-part2-hover">
+              <div>
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <p>Ha Noi, Viet Nam 222</p>
+              </div>
+            </div>
+          </div>
+          <div class="header-dashboard-line1-part2">
+            <div class="line1-part2-red">
+              <i class="fa-regular fa-envelope"></i>
+            </div>
+            <div>
+              <p>nmthong111@gmail.com</p>
+            </div>
+            <div class="line1-part2-white">
+              <i class="fa-brands fa-facebook-f"></i>
+            </div>
+            <div class="line1-part2-white">
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+            <div class="line1-part2-white">
+              <i class="fa-brands fa-twitter"></i>
+            </div>
+            <div class="line1-part2-white">
+              <i class="fa-regular fa-message"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-dashboard">
+        
+        <div class="header-dashboard-line2">
+          <div class="header-dashboard-img">
+            <img
+              src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIUAAAAcCAYAAABPs3y3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpBNTlEOUU0QkI0QzBFRTExQUY4MkM3ODFEQkQ3RjEwRSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDowN0QwQUVFRkMwRjcxMUVFOEZCQjk2QjkzREM2MUY0RSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDowN0QwQUVFRUMwRjcxMUVFOEZCQjk2QjkzREM2MUY0RSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IFdpbmRvd3MiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5MEE1QTZEMEYwQzBFRTExQUY4MkM3ODFEQkQ3RjEwRSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBNTlEOUU0QkI0QzBFRTExQUY4MkM3ODFEQkQ3RjEwRSIvPiA8L3JkZjpEZXNjcmlwdGlv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"
+              alt=""
+            />
+          </div>
+          <div class="header-dashboard-hero-infomation">
+            <div class="header-dashboard-hero-infomation-hover">
+              <p><b>Hero</b></p>
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
+          </div>
+          <div class="header-dashboard-all-infomation">
+            <div class="header-dashboard-listing-infomation-hover">
+              <p><b>Listing</b></p>
+              <i class="fa-solid fa-caret-down opacity"></i>
+            </div>
+          </div>
+          <div class="header-dashboard-all-infomation">
+            <div class="header-dashboard-pages-infomation-hover">
+              <p><b>Pages</b></p>
+              <i class="fa-solid fa-caret-down opacity"></i>
+            </div>
+          </div>
+          <div class="header-dashboard-all-infomation">
+            <div class="header-dashboard-blog-infomation-hover">
+              <p><b>Blog</b></p>
+              <i class="fa-solid fa-caret-down opacity"></i>
+            </div>
+          </div>
+          <div class="header-dashboard-all-infomation">
+            <div class="header-dashboard-contact-infomation">
+              <p><b>Contact Us</b></p>
+            </div>
+          </div>
+          <div class="header-dashboard-all-infomation-click">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+        <div class="header-dashboard-line3">
+          <div class="line3-hero">
+            <ul>
+              <li>Tour One</li>
+              <li>Tour Two</li>
+              <li>Two Three</li>
+            </ul>
+          </div>
+          <div class="line3-listing">
+            <ul>
+              <li>Tour Grid</li>
+              <li>Tour List</li>
+              <li>Two Detail</li>
+            </ul>
+          </div>
+          <div class="line3-pages">
+            <ul>
+              <li>My Account</li>
+              <li>About Us</li>
+              <li>Helpcenter</li>
+              <li>Auth Pages</li>
+              <li>Speacial</li>
+            </ul>
+          </div>
+          <div class="line3-blog">
+            <ul>
+              <li>Blog Standarad</li>
+              <li>Blog Detail</li>
+            </ul>
+          </div>
+          <div class="line3-input">
+            <input type="text" placeholder="Search" />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+      </div>
+      <div class="header-write">
+        <div class="header-write-image">
+          <img src="anh_nen/anh_nen_villa.png" alt="" />
+        </div>
+        <div class="header-write-p-big">
+          <p><b>Find Your Best Travels Package</b></p>
+        </div>
+        <div class="header-write-p-small">
+          <p>
+            Planning for a trip? We will organize your trip with the best places
+            and within best budget!
+          </p>
+        </div>
+        <div class="header-write-button">
+          <button>See more</button>
+        </div>
+      </div>
+    </header>
+    <body>
+      <div class="body-infomation"> 
+        <div class="body-infomation-small">
+          <div class="body-infomation-small-search">
+            <div class="body-infomation-small-search-icon">
+              <p>Search:</p>
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div>
+              <input type="text" placeholder="Search..." />
+            </div>
+          </div>
+          <div class="body-infomation-small-date">
+            <div>
+              <p>Select Your Date:</p>
+            </div>
+            <div>
+              <input type="date" />
+            </div>
+          </div>
+          <div class="body-infomation-small-location">
+            <div>
+              <p>Select Your Location:</p>
+            </div>
+            <div>
+              <select name="" id="">
+                <option value="">Dubai</option>
+                <option value="">Bangkok</option>
+                <option value="">Thailand</option>
+                <option value="">Singapore</option>
+                <option value="">Bali</option>
+              </select>
+            </div>
+          </div>
+          <div class="body-infomation-small-person">
+            <div>
+              <p>No. of person:</p>
+            </div>
+            <div>
+              <select name="" id="">
+                <option disabled="disabled" value="">No. of person:</option>
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+                <option value="">5</option>
+              </select>
+            </div>
+          </div>
+          <div class="body-infomation-small-button">
+            <div>
+              <button><p>Gửi</p></button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="body-introduce">
+        <div class="body-introduce-small">
+          <div class="body-introduce-small-img">
+            <img
+              src="https://travosy.vercel.app/static/media/about.3fbbd871b0481164dd4a.jpg"
+              alt=""
+            />
+          </div>
+          <div class="body-introduce-small-write">
+            <div class="body-introduce-small-write-tittle">
+              <p><b>World Best Travel Agency: Travosy</b></p>
+            </div>
+            <div class="body-introduce-small-write-p">
+              <p>
+                Get instant helpful resources about anything on the go, easily
+                implement secure money transfer solutions, boost your daily
+                efficiency, connect to other app users and create your own
+                Travosy network, and much more with just a few taps. commodo
+                consequat. Duis aute irure.
+              </p>
+            </div>
+            <div class="body-introduce-small-button">
+              <button>
+                <p>Read More</p>
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+            <div class="body-introduce-small-information">
+              <div class="body-introduce-small-information-1">
+                <div class="body-introduce-small-information-1-icon">
+                  <i class="fa-regular fa-address-card"></i>
+                </div>
+                <div class="body-introduce-small-information-1-p">
+                  <p style="color: #a9a9a9">Visitor</p>
+                  <p style="font-size: 20px"><b>4,589</b></p>
+                </div>
+              </div>
+              <div class="body-introduce-small-information-1">
+                <div class="body-introduce-small-information-1-icon">
+                  <i class="fa-regular fa-map"></i>
+                </div>
+                <div class="body-introduce-small-information-1-p">
+                  <p style="color: #a9a9a9">Travel Packages</p>
+                  <p style="font-size: 20px"><b>50+</b></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="body-write">
+        <div class="body-write-title">
+          <p><b>Tours Packages</b></p>
+        </div>
+        <div class="body-write-p">
+          <p>
+            Planning for a trip? We will organize your trip with the best places
+            and within best budget!
+          </p>
+        </div>
+      </div>
+      <div class="body-service">
+        <div class="body-service-row">
+          <div class="contener">
+            <div class="contener_img">
+              <div class="contener_img_small" id="img1">
+                <div class="contener_information">
+                  <div class="contener_discount">
+                    <div class="discount">
+                      <p>10% Off</p>
+                    </div>
+                  </div>
+                  <div class="contener_love">
+                    <div class="love" id="love_red1">
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="width: 20px; height: 100%"></div>
+            <div class="contener_write">
+              <div style="width: 100%; height: 40px"></div>
+              <div class="location">
+                <div class="location_icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="location_write">
+                  <p>Dubai</p>
+                </div>
+              </div>
+              <div class="name">
+                <a href="https://travosy.vercel.app/tour-detail-one/1"
+                  ><p>Cuba Sailing Adventure</p></a
+                >
+              </div>
+              <div class="rating">
+                <div class="rating-p">
+                  <p>Rating:</p>
+                </div>
+                <div class="rating_icon">
+                  <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                </div>
+                <div style="margin-left: 5px">
+                  <p>4.5 (236)</p>
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 200px;
+                  height: 20px;
+                  border-top: 1px solid rgb(232, 226, 226);
+                  margin-top: 10px;
+                "
+              ></div>
+              <div class="cost">
+                <div>
+                  <p><b>$ 102 / Day</b></p>
+                </div>
+                <div class="cost_del">
+                  <del>
+                    <b> $ 120 / Day</b>
+                  </del>
+                </div>
+              </div>
+              <button class="explore">
+                <a href="">
+                  <p>Explore Now</p>
+                </a>
+              </button>
+            </div>
+          </div>
+          <div style="width: 50px; height: 300px"></div>
+          <div class="contener">
+            <div class="contener_img">
+              <div class="contener_img_small" id="img2">
+                <div class="contener_information">
+                  <div class="contener_love">
+                    <div class="love" id="love_red2" style="margin-left: 135px">
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="width: 20px; height: 100%"></div>
+            <div class="contener_write">
+              <div style="width: 100%; height: 40px"></div>
+              <div class="location">
+                <div class="location_icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="location_write">
+                  <p>Italy</p>
+                </div>
+              </div>
+              <div class="name">
+                <a href="https://travosy.vercel.app/tour-detail-one/1"
+                  ><p>Tour in New York</p></a
+                >
+              </div>
+              <div class="rating">
+                <div class="rating-p">
+                  <p>Rating:</p>
+                </div>
+                <div class="rating_icon">
+                  <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                </div>
+                <div style="margin-left: 5px">
+                  <p>3.0 (413)</p>
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 200px;
+                  height: 20px;
+                  border-top: 1px solid rgb(232, 226, 226);
+                  margin-top: 10px;
+                "
+              ></div>
+              <div class="cost">
+                <div>
+                  <p><b>$ 128 / Day</b></p>
+                </div>
+              </div>
+              <button class="explore">
+                <a href="">
+                  <p>Explore Now</p>
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="body-service-row">
+          <div class="contener">
+            <div class="contener_img">
+              <div class="contener_img_small" id="img3">
+                <div class="contener_information">
+                  <div class="contener_love">
+                    <div class="love" id="love_red4" style="margin-left: 135px">
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="width: 20px; height: 100%"></div>
+            <div class="contener_write">
+              <div style="width: 100%; height: 40px"></div>
+              <div class="location">
+                <div class="location_icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="location_write">
+                  <p>Maldivas</p>
+                </div>
+              </div>
+              <div class="name">
+                <a href="https://travosy.vercel.app/tour-detail-one/1"
+                  ><p>Discover Greece</p></a
+                >
+              </div>
+              <div class="rating">
+                <div class="rating-p">
+                  <p>Rating:</p>
+                </div>
+                <div class="rating_icon">
+                  <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                </div>
+                <div style="margin-left: 5px">
+                  <p>3.5 (18)</p>
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 200px;
+                  height: 20px;
+                  border-top: 1px solid rgb(232, 226, 226);
+                  margin-top: 10px;
+                "
+              ></div>
+              <div class="cost">
+                <div>
+                  <p><b>$ 73 / Day</b></p>
+                </div>
+              </div>
+              <button class="explore">
+                <a href="">
+                  <p>Explore Now</p>
+                </a>
+              </button>
+            </div>
+          </div>
+          <div style="width: 50px; height: 300px"></div>
+          <div class="contener">
+            <div class="contener_img">
+              <div class="contener_img_small" id="img4">
+                <div class="contener_information">
+                  <div class="contener_love">
+                    <div class="love" id="love_red3" style="margin-left: 135px">
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="width: 20px; height: 100%"></div>
+            <div class="contener_write">
+              <div style="width: 100%; height: 40px"></div>
+              <div class="location">
+                <div class="location_icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="location_write">
+                  <p>USA</p>
+                </div>
+              </div>
+              <div class="name">
+                <a href="https://travosy.vercel.app/tour-detail-one/1"
+                  ><p>Museum of Modern Act</p></a
+                >
+              </div>
+              <div class="rating">
+                <div class="rating-p">
+                  <p>Rating:</p>
+                </div>
+                <div class="rating_icon">
+                  <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                  </div>
+                </div>
+                <div style="margin-left: 5px">
+                  <p>4.5 (89)</p>
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 200px;
+                  height: 20px;
+                  border-top: 1px solid rgb(232, 226, 226);
+                  margin-top: 10px;
+                "
+              ></div>
+              <div class="cost">
+                <div>
+                  <p><b>$ 60 / Day</b></p>
+                </div>
+              </div>
+              <button class="explore">
+                <a href="">
+                  <p>Explore Now</p>
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="body-service-row">
+          <div class="contener">
+            <div class="contener_img">
+              <div class="contener_img_small" id="img5">
+                <div class="contener_information">
+                  <div class="contener_discount">
+                    <div class="discount">
+                      <p>15% Off</p>
+                    </div>
+                  </div>
+                  <div class="contener_love">
+                    <div class="love" id="love_red6">
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="width: 20px; height: 100%"></div>
+            <div class="contener_write">
+              <div style="width: 100%; height: 40px"></div>
+              <div class="location">
+                <div class="location_icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="location_write">
+                  <p>Bali</p>
+                </div>
+              </div>
+              <div class="name">
+                <a href="https://travosy.vercel.app/tour-detail-one/1"
+                  ><p>Peek Mountain View</p></a
+                >
+              </div>
+              <div class="rating">
+                <div>
+                  <p>Rating:</p>
+                </div>
+                <div class="rating_icon">
+                  <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+                <div style="margin-left: 5px">
+                  <p>5.0 (318)</p>
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 200px;
+                  height: 20px;
+                  border-top: 1px solid rgb(232, 226, 226);
+                  margin-top: 10px;
+                "
+              ></div>
+              <div class="cost">
+                <div>
+                  <p><b>$ 60 / Day</b></p>
+                </div>
+                <div class="cost_del">
+                  <del>
+                    <b> $ 70 / Day</b>
+                  </del>
+                </div>
+              </div>
+              <button class="explore">
+                <a href="">
+                  <p>Explore Now</p>
+                </a>
+              </button>
+            </div>
+          </div>
+          <div style="width: 50px; height: 300px"></div>
+          <div class="contener">
+            <div class="contener_img">
+              <div class="contener_img_small" id="img6">
+                <div class="contener_information">
+                  <div class="contener_discount">
+                    <div class="discount">
+                      <p>10% Off</p>
+                    </div>
+                  </div>
+                  <div class="contener_love">
+                    <div class="love" id="love_red5">
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="width: 20px; height: 100%"></div>
+            <div class="contener_write">
+              <div style="width: 100%; height: 40px"></div>
+              <div class="location">
+                <div class="location_icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="location_write">
+                  <p>Bangkok</p>
+                </div>
+              </div>
+              <div class="name">
+                <a href="https://travosy.vercel.app/tour-detail-one/1"
+                  ><p>Hot Baloon Journey</p></a
+                >
+              </div>
+              <div class="rating">
+                <div class="rating-p">
+                  <p>Rating:</p>
+                </div>
+                <div class="rating_icon">
+                  <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                </div>
+                <div style="margin-left: 5px">
+                  <p>3.0 (67)</p>
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 200px;
+                  height: 20px;
+                  border-top: 1px solid rgb(232, 226, 226);
+                  margin-top: 10px;
+                "
+              ></div>
+              <div class="cost">
+                <div>
+                  <p><b>$ 36 / Day</b></p>
+                </div>
+                <div class="cost_del">
+                  <del>
+                    <b> $ 40 / Day</b>
+                  </del>
+                </div>
+              </div>
+              <button class="explore">
+                <a href="">
+                  <p>Explore Now</p>
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="body-service-row">
+          <div class="contener">
+            <div class="contener_img">
+              <div class="contener_img_small" id="img7">
+                <div class="contener_information">
+                  <div class="contener_love">
+                    <div class="love" id="love_red7" style="margin-left: 135px">
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="width: 20px; height: 100%"></div>
+            <div class="contener_write">
+              <div style="width: 100%; height: 40px"></div>
+              <div class="location">
+                <div class="location_icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="location_write">
+                  <p>Singapore</p>
+                </div>
+              </div>
+              <div class="name">
+                <a href="https://travosy.vercel.app/tour-detail-one/1"
+                  ><p>Orca Camp Kayaking Trip</p></a
+                >
+              </div>
+              <div class="rating">
+                <div  class="rating-p" >
+                  <p>Rating:</p>
+                </div>
+                <div class="rating_icon">
+                  <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </div>
+                </div>
+                <div style="margin-left: 5px">
+                  <p>5.0 (731)</p>
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 200px;
+                  height: 20px;
+                  border-top: 1px solid rgb(232, 226, 226);
+                  margin-top: 10px;
+                "
+              ></div>
+              <div class="cost">
+                <div>
+                  <p><b>$ 130 / Day</b></p>
+                </div>
+              </div>
+              <button class="explore">
+                <a href="">
+                  <p>Explore Now</p>
+                </a>
+              </button>
+            </div>
+          </div>
+          <div style="width: 50px; height: 300px"></div>
+          <div class="contener">
+            <div class="contener_img">
+              <div class="contener_img_small" id="img8">
+                <div class="contener_information">
+                  <div class="contener_discount">
+                    <div class="discount">
+                      <p>20% Off</p>
+                    </div>
+                  </div>
+                  <div class="contener_love">
+                    <div class="love" id="love_red8">
+                      <i class="fa-solid fa-heart"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div style="width: 20px; height: 100%"></div>
+            <div class="contener_write">
+              <div style="width: 100%; height: 40px"></div>
+              <div class="location">
+                <div class="location_icon">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div class="location_write">
+                  <p>Thailand</p>
+                </div>
+              </div>
+              <div class="name">
+                <a href="https://travosy.vercel.app/tour-detail-one/1"
+                  ><p>Cano Cristales River Trip</p></a
+                >
+              </div>
+              <div class="rating">
+                <div class="rating-p">
+                  <p>Rating:</p>
+                </div>
+                <div class="rating_icon">
+                  <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                  </div>
+                </div>
+                <div style="margin-left: 5px">
+                  <p>4.0 (119)</p>
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  width: 200px;
+                  height: 20px;
+                  border-top: 1px solid rgb(232, 226, 226);
+                  margin-top: 10px;
+                "
+              ></div>
+              <div class="cost">
+                <div>
+                  <p><b>$ 56 / Day</b></p>
+                </div>
+                <div class="cost_del">
+                  <del>
+                    <b> $ 70 / Day</b>
+                  </del>
+                </div>
+              </div>
+              <button class="explore">
+                <a href="">
+                  <p>Explore Now</p>
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="body-write">
+        <div class="body-write-title">
+          <p><b>What Our Users Say</b></p>
+        </div>
+        <div class="body-write-p">
+          <p>
+            This is just a simple text made for this unique and awesome template, you can replace it with any text.
+          </p>
+        </div>
+      </div>
+      <!-- <div class="body-comment">
+          <div class="body-comment-small">
+
+          </div>
+      </div> -->
+      <div class="body-write">
+        <div class="body-write-title">
+          <p><b>Travel Blogs</b></p>
+        </div>
+        <div class="body-write-p">
+          <p>
+            This is just a simple text made for this unique and awesome
+            template, you can replace it with any text.
+          </p>
+        </div>
+      </div>
+      <div class="body-more-information">
+          <div class="body-more-information-small">
+              <div class="body-more-information-small-box">
+                  <div class="body-more-information-small-box-img">
+                    <img src="https://travosy.vercel.app/static/media/1.f66fa632eaccba2c9d8f.jpg" alt="">
+                  </div>
+                  <div class="body-more-information-small-box-write">
+                      <div class="body-more-information-small-box-write-time">
+                        <i class="fa-regular fa-clock"></i>
+                        <p>5 min read</p>
+                      </div>
+                      <div class="body-more-information-small-box-write-title">
+                        <p>This Spanish city is a feast for the eyes: Travosy</p>
+                      </div>
+                      <div class="body-more-information-small-box-write-p">
+                        <p>This is required when, for example, the final text is not yet available.</p>
+                      </div>
+                      <div class="body-more-information-small-box-write-button">
+                        <button>
+                          <a href="" style="display: flex;">
+                            <p>Read more</p>
+                            <i class="fa-solid fa-chevron-right"></i>
+                          </a>
+                        </button>
+                      </div>
+                  </div>
+              </div>
+              <div style="width: 5%; height: 500px;"></div>
+              <div class="body-more-information-small-box">
+                <div class="body-more-information-small-box-img">
+                  <img src="https://travosy.vercel.app/static/media/2.636ceeaba4594da2f280.jpg" alt="">
+                </div>
+                <div class="body-more-information-small-box-write">
+                    <div class="body-more-information-small-box-write-time">
+                      <i class="fa-regular fa-clock"></i>
+                      <p>5 min read</p>
+                    </div>
+                    <div class="body-more-information-small-box-write-title">
+                      <p>New Zealand’s South Island brims with majestic</p>
+                    </div>
+                    <div class="body-more-information-small-box-write-p">
+                      <p>This is required when, for example, the final text is not yet available.</p>
+                    </div>
+                    <div class="body-more-information-small-box-write-button">
+                      <button>
+                        <a href="" style="display: flex;">
+                          <p>Read more</p>
+                          <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                      </button>
+                    </div>
+                </div>
+            </div>
+              <div style="width: 5%; height: 500px;"></div>
+              <div class="body-more-information-small-box">
+                <div class="body-more-information-small-box-img">
+                  <img src="https://travosy.vercel.app/static/media/3.86227d75d7bec8381222.jpg" alt="">
+                </div>
+                <div class="body-more-information-small-box-write">
+                    <div class="body-more-information-small-box-write-time">
+                      <i class="fa-regular fa-clock"></i>
+                      <p>5 min read</p>
+                    </div>
+                    <div class="body-more-information-small-box-write-title">
+                      <p>When you visit the Eternal Rome City: Travosy</p>
+                    </div>
+                    <div class="body-more-information-small-box-write-p">
+                      <p>This is required when, for example, the final text is not yet available.</p>
+                    </div>
+                    <div class="body-more-information-small-box-write-button">
+                      <button>
+                        <a href="" style="display: flex;">
+                          <p>Read more</p>
+                          <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                      </button>
+                    </div>
+                </div>
+            </div>
+          </div>
+      </div>
+      <div class="end">
+        <div class="end-small">
+          <div class="end-small-box1">
+            <div>
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIUAAAAcCAYAAABPs3y3AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2RpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpBNTlEOUU0QkI0QzBFRTExQUY4MkM3ODFEQkQ3RjEwRSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDowN0QwQUVFRkMwRjcxMUVFOEZCQjk2QjkzREM2MUY0RSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDowN0QwQUVFRUMwRjcxMUVFOEZCQjk2QjkzREM2MUY0RSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IFdpbmRvd3MiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5MEE1QTZEMEYwQzBFRTExQUY4MkM3ODFEQkQ3RjEwRSIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBNTlEOUU0QkI0QzBFRTExQUY4MkM3ODFEQkQ3RjEwRSIvPiA8L3JkZjpEZXNjcmlwdGlv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" alt="">
+            </div>
+            <div class="end-small-box1-p">
+              <p>Planning for a trip? We will organize your trip with the best places and within best budget!</p>
+            </div>
+            <div class="end-small-box1-icon">
+              <div class="end-small-box1-icon-border">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </div>
+              <div class="end-small-box1-icon-border">
+                <i class="fa-solid fa-basketball"></i>
+              </div>
+              <div class="end-small-box1-icon-border">
+                <i class="fa-solid fa-info"></i>
+              </div>
+              <div class="end-small-box1-icon-border">
+                <i class="fa-brands fa-facebook-f"></i>
+              </div>
+              <div class="end-small-box1-icon-border">
+                <i class="fa-brands fa-instagram"></i>
+              </div>
+              <div class="end-small-box1-icon-border">
+                <i class="fa-brands fa-twitter"></i>
+              </div>
+              <div class="end-small-box1-icon-border">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+
+            </div>
+          </div>
+          <div class="end-small-box2">
+            <div class="end-small-box2-line1">
+              <p><b>Office</b></p>
+            </div>
+            <div class="end-small-box2-line2">
+              <p>Travosy Tour & Travel</p>
+            </div>
+            <div class="end-small-box2-line3">
+              <div>
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <p>C/54 Northwest Freeway,
+                  Suite 558,
+                  Houston, USA 485</p>
+              </div>
+            </div>
+            <div class="end-small-box2-line4">
+              <div>
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <p>nmthong111@gmail.com</p>
+              </div>
+            </div>
+            <div class="end-small-box2-line4">
+              <div>
+                <i class="fa-solid fa-phone"></i>
+              </div>
+              <div>
+                <p>+ 0888 696 969</p>
+              </div>
+            </div>
+          </div>
+          <div class="end-small-box3">
+            <div class="end-small-box2-line1">
+              <p><b>Company</b></p>
+            </div>
+            <div class="end-small-box3-line1">
+              <i class="fa-solid fa-chevron-right"></i>
+              <p>About us</p>
+            </div>
+            <div class="end-small-box3-line1">
+              <i class="fa-solid fa-chevron-right"></i>
+              <p>Services</p>
+            </div>
+            <div class="end-small-box3-line1">
+              <i class="fa-solid fa-chevron-right"></i>
+              <p>Team</p>
+            </div>
+            <div class="end-small-box3-line1">
+              <i class="fa-solid fa-chevron-right"></i>
+              <p>Pricing</p>
+            </div>
+            <div class="end-small-box3-line1">
+              <i class="fa-solid fa-chevron-right"></i>
+              <p>Blog</p>
+            </div>
+            <div class="end-small-box3-line1">
+              <i class="fa-solid fa-chevron-right"></i>
+              <p>Login</p>
+            </div>
+          </div>
+          <div class="end-small-box4">
+            <div class="end-small-box2-line1">
+              <p><b>Newsletter</b></p>
+            </div>
+            <div class="end-small-box4-line1">
+              <p>Sign up and receive the latest tips via email.</p>
+            </div>
+            <div class="end-small-box4-line2">
+              <p>Write your email *.</p>
+            </div>
+            <div class="end-small-box4-line3">
+                <input type="text" placeholder="Email...." id="email" />
+                <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="end-small-box4-line4">
+              <button onclick="lienhe()">
+                <p><b>Subscribe</b></p>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="author">
+          <div class="author-small">
+            <p>© 2024 Travosy. Design & Develop with  by Minh Thong.</p>
+          </div>
+        </div>
+      </div>
+      
+    </body>
+  </body>
+</html>
